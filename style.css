@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #f6f6f6;
+  color: #111;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  height: 100vh;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  color: #d4af37;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+header p {
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+/* Sections */
+.year {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.year h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.year ul {
+  list-style: none;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* Gallery */
+.gallery {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.photo-slot {
+  height: 150px;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.9rem;
+}

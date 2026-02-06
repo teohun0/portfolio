@@ -1,4 +1,75 @@
-* {.year {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #f6f6f6;
+  color: #111;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+/* Progress Indicator */
+.progress {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 100;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #bbb;
+  transition: all 0.4s ease;
+}
+
+.dot.active {
+  background: #d4af37;
+  transform: scale(1.6);
+}
+
+/* Header */
+header {
+  height: 100vh;
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  color: #d4af37;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+header p {
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+/* Sections */
+.year {
+  min-height: 100vh;
+  padding: 80px 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(180deg, #ffffff, #f3f3f3);
+  scroll-snap-align: start;
+
   opacity: 0;
   transform: translateY(120px) scale(0.96);
   transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -9,14 +80,13 @@
   transform: translateY(0) scale(1);
 }
 
-
-
-body {
-  scroll-snap-type: y mandatory;
+.year h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
 }
 
-.year, header {
-  scroll-snap-align: start;
+.year ul {
+  list-style: none;
+  line-height: 1.9;
+  font-weight: 400;
 }
-
-background: linear-gradient(180deg, #ffffff, #f3f3f3);

@@ -10,3 +10,11 @@
 }
 
 
+
+body {
+  scroll-snap-type: y mandatory;
+}
+
+.year, header {
+  scroll-snap-align: start;
+}
